@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Programa Integral de Capacitación en Ciberseguridad para Quantum Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 45vh;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                max-height: 450px;
+            }
+        }
+        .flowchart-step {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .flowchart-arrow {
+            color: #45B7D1;
+            font-weight: 900;
+            font-size: 3rem;
+            transform: rotate(90deg);
+        }
+        @media (min-width: 768px) {
+            .flowchart-arrow {
+                 transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md p-6 text-center sticky top-0 z-50">
+        <div class="flex flex-col md:flex-row items-center justify-center">
+            <img src="C:\Users\LeidyRuV\Downloads\Logo de Quantum Learning (1).jpeg" alt="Logo de Quantum Academy" class="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover mb-4 md:mb-0 md:mr-6">
+            <div>
+                <h1 class="text-3xl md:text-4xl font-black text-gray-900">Ciberseguridad en Quantum Academy</h1>
+                <p class="text-lg text-gray-600 mt-2">Protegiendo el Futuro Digital de la Educación Tecnológica</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="introduccion" class="my-12">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Quantum Academy: Contexto y Justificación</h2>
+                <p class="max-w-4xl mx-auto text-gray-600 mb-6 text-justify">
+                    Quantum Academy es una institución educativa líder en el sector tecnológico, especializada en cursos de corta duración. En su operación, gestiona una vasta cantidad de información sensible de empleados, estudiantes, así como datos académicos, financieros y operativos. Esta información se distribuye en una sede central (Centro Medellín) y dos sedes alternativas (Norte y Sur). La institución opera con una infraestructura tecnológica significativa, incluyendo equipos informáticos para mentores y administrativos, y una gran cantidad de equipos para estudiantes en modalidad presencial.
+                </p>
+                <p class="max-w-4xl mx-auto text-gray-600 text-justify">
+                    Las crecientes amenazas cibernéticas hacen indispensable el desarrollo e implementación de una estrategia de ciberseguridad robusta y adaptable. Un incidente de seguridad podría acarrear consecuencias significativas, incluyendo la pérdida o alteración de datos confidenciales, interrupción de las operaciones académicas y administrativas, daño a la reputación institucional y posibles incumplimientos normativos en materia de protección de datos. Este proyecto se justifica por la necesidad imperante de proteger los activos digitales de Quantum Academy, garantizar la continuidad de sus servicios educativos, preservar la confianza de sus estudiantes y empleados, y cumplir con las mejores prácticas y regulaciones de seguridad de la información vigentes en Colombia.
+                </p>
+            </div>
+        </section>
+
+        <section id="estructura-organizacional" class="my-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 h-full">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Estructura de Personal</h2>
+                <p class="text-gray-600 mb-8 text-center">
+                    La diversidad de roles en Quantum Academy subraya la necesidad de una capacitación en ciberseguridad adaptada a cada función, dada la diferente exposición a la información sensible.
+                </p>
+                <div class="chart-container mx-auto">
+                    <canvas id="employeeChart"></canvas>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 h-full">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Datos Clave de Quantum Academy</h2>
+                <p class="text-gray-600 mb-8 text-center">
+                    Un vistazo a las cifras que definen la escala de nuestra operación y la cantidad de activos digitales a proteger.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center">
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-5xl font-black text-[#FF6B6B]">3</span>
+                        <p class="text-lg font-semibold mt-1">Sedes Operativas</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-5xl font-black text-[#4ECDC4]">270+</span>
+                        <p class="text-lg font-semibold mt-1">Estudiantes (Capacidad)</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-5xl font-black text-[#45B7D1]">49</span>
+                        <p class="text-lg font-semibold mt-1">Empleados</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-5xl font-black text-[#F7B801]">295+</span>
+                        <p class="text-lg font-semibold mt-1">Equipos Informáticos</p>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h3 class="font-bold text-xl text-center text-gray-800 mb-4">Tipos de Datos Sensibles Gestionados:</h3>
+                    <ul class="list-none space-y-2 text-gray-600 text-center">
+                        <li class="flex items-center justify-center"><span class="text-xl mr-2">🔒</span> Información de Empleados</li>
+                        <li class="flex items-center justify-center"><span class="text-xl mr-2">🎓</span> Datos Académicos de Estudiantes</li>
+                        <li class="flex items-center justify-center"><span class="text-xl mr-2">💰</span> Información Financiera</li>
+                        <li class="flex items-center justify-center"><span class="text-xl mr-2">⚙️</span> Datos Operativos Críticos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision-general-programa" class="text-center my-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Visión General del Programa de Ciberseguridad</h2>
+            <p class="max-w-3xl mx-auto text-gray-600 mb-8">
+                Este programa integral está diseñado para fortalecer nuestra cultura de seguridad. A continuación, se presentan los pilares fundamentales de esta iniciativa estratégica.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <span class="text-6xl font-black text-[#FF6B6B]">3</span>
+                    <h3 class="text-2xl font-bold mt-2">Fases Clave</h3>
+                    <p class="text-gray-500 mt-2">Desde la base hasta el refuerzo continuo.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <span class="text-6xl font-black text-[#4ECDC4]">2</span>
+                    <h3 class="text-2xl font-bold mt-2">Audiencias Principales</h3>
+                    <p class="text-gray-500 mt-2">Empleados y estudiantes, todos son parte de la defensa.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <span class="text-6xl font-black text-[#45B7D1]">7+</span>
+                    <h3 class="text-2xl font-bold mt-2">Tópicos Críticos</h3>
+                    <p class="text-gray-500 mt-2">Cubriendo las amenazas más relevantes de hoy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fase1" class="my-16">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Fase 1: Capacitación Inicial Obligatoria</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 mb-8 text-center">
+                    La primera fase establece una base sólida de conocimientos en ciberseguridad para todos los participantes. Se compara la duración de los módulos para entender la inversión de tiempo requerida en cada área fundamental.
+                </p>
+                <div class="chart-container mx-auto">
+                    <canvas id="fase1Chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="fase2" class="my-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 h-full">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Fase 2: Capacitación por Rol</h2>
+                <p class="text-gray-600 mb-8 text-center">
+                    Esta fase ofrece capacitación especializada para roles con acceso a datos sensibles o responsabilidades técnicas, profundizando en áreas de alto riesgo. El personal de TI requiere una inversión de tiempo significativamente mayor debido a la complejidad técnica.
+                </p>
+                <div class="chart-container mx-auto">
+                    <canvas id="fase2Chart"></canvas>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 h-full">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Tópicos Clave del Programa</h2>
+                 <p class="text-gray-600 mb-8 text-center">
+                    Un vistazo a los conceptos más importantes cubiertos en el programa. El tamaño de cada burbuja representa su importancia relativa o la frecuencia con la que se aborda, destacando el 'Phishing' y el 'Malware' como amenazas centrales.
+                </p>
+                <div class="chart-container mx-auto">
+                    <canvas id="topicsChart"></canvas>
+                </div>
+            </div>
+        </section>
+        
+        <section id="proceso" class="my-16 md:col-span-2">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Flujo del Programa de Capacitación</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 mb-12 text-center">
+                    El programa sigue un flujo lógico y progresivo, comenzando con una base sólida, avanzando hacia la especialización y culminando en un ciclo de refuerzo constante para garantizar que la seguridad siga siendo una prioridad.
+                </p>
+                <div class="flex flex-col md:flex-row justify-around items-center gap-4">
+                    <div class="flowchart-step bg-[#FF6B6B] text-white p-6 rounded-lg shadow-md w-60 h-40">
+                        <div class="font-bold text-lg">FASE 1<br><span class="font-normal text-sm">Capacitación Inicial</span></div>
+                    </div>
+                    <div class="flowchart-arrow">»</div>
+                    <div class="flowchart-step bg-[#4ECDC4] text-white p-6 rounded-lg shadow-md w-60 h-40">
+                        <div class="font-bold text-lg">FASE 2<br><span class="font-normal text-sm">Capacitación por Rol</span></div>
+                    </div>
+                    <div class="flowchart-arrow">»</div>
+                    <div class="flowchart-step bg-[#45B7D1] text-white p-6 rounded-lg shadow-md w-60 h-40">
+                        <div class="font-bold text-lg">FASE 3<br><span class="font-normal text-sm">Concientización Continua</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fase3" class="my-16">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Fase 3: Concientización Continua</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 mb-8 text-center">
+                    La seguridad no es un evento único. Esta fase garantiza que los conocimientos se mantengan frescos y relevantes a través de un programa de refuerzo constante con diferentes frecuencias y formatos.
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th class="p-4 font-bold uppercase text-sm text-gray-600 border-b">Actividad</th>
+                                <th class="p-4 font-bold uppercase text-sm text-gray-600 border-b">Frecuencia</th>
+                                <th class="p-4 font-bold uppercase text-sm text-gray-600 border-b">Objetivo Principal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 border-b border-gray-200">Campañas de Concientización</td>
+                                <td class="p-4 border-b border-gray-200 font-semibold text-[#FF6B6B]">Mensual / Trimestral</td>
+                                <td class="p-4 border-b border-gray-200">Mantener la seguridad como prioridad.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 border-b border-gray-200">Simulaciones de Phishing</td>
+                                <td class="p-4 border-b border-gray-200 font-semibold text-[#4ECDC4]">Semestral / Anual</td>
+                                <td class="p-4 border-b border-gray-200">Evaluar la capacidad de detección.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 border-b border-gray-200">Boletines de Noticias</td>
+                                <td class="p-4 border-b border-gray-200 font-semibold text-[#FF6B6B]">Mensual</td>
+                                <td class="p-4 border-b border-gray-200">Informar sobre nuevas amenazas.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 border-b border-gray-200">Sesiones de Q&A</td>
+                                <td class="p-4 border-b border-gray-200 font-semibold text-[#4ECDC4]">Trimestral</td>
+                                <td class="p-4 border-b border-gray-200">Resolver dudas y compartir experiencias.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="evaluacion" class="my-16">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Evaluación y Medición del Éxito</h2>
+            <p class="max-w-3xl mx-auto text-gray-600 mb-8 text-center">
+                El éxito del programa se mide a través de un conjunto equilibrado de métricas que evalúan la participación, el conocimiento adquirido y el impacto real en la reducción de incidentes de seguridad.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-xl text-[#FF6B6B]">📊 Métricas de Participación</h3>
+                    <ul class="list-disc list-inside mt-3 text-gray-600 space-y-1">
+                        <li>% de finalización de módulos</li>
+                        <li>Tasa de asistencia a sesiones</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-xl text-[#4ECDC4]">🧠 Métricas de Desempeño</h3>
+                    <ul class="list-disc list-inside mt-3 text-gray-600 space-y-1">
+                        <li>Resultados de cuestionarios</li>
+                        <li>Tasa de clics en phishing (a la baja)</li>
+                        <li>Tasa de reportes correctos (al alza)</li>
+                    </ul>
+                </div>
+                 <div class="bg-white rounded-lg shadow-lg p-6 md:col-span-2 lg:col-span-1">
+                    <h3 class="font-bold text-xl text-[#45B7D1]">📉 Métricas de Impacto</h3>
+                    <ul class="list-disc list-inside mt-3 text-gray-600 space-y-1">
+                        <li>Reducción de incidentes por error humano</li>
+                        <li>Mejora en tiempos de respuesta</li>
+                        <li>Resultados de encuestas de percepción</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="text-center p-6 bg-gray-800 text-white mt-12">
+        <p>&copy; 2024 Quantum Academy. Fomentando una cultura de ciberseguridad.</p>
+    </footer>
+
+    <script>
+        const energeticPlayfulPalette = {
+            coral: '#FF6B6B',
+            teal: '#4ECDC4',
+            skyBlue: '#45B7D1',
+            yellowGold: '#F7B801',
+            darkGray: '#555555',
+            lightGray: '#DDDDDD'
+        };
+
+        function processLabel(label, maxLength) {
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = currentLine ? currentLine + ' ' + word : word;
+                }
+            });
+            lines.push(currentLine);
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const commonChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleFont: { size: 14, weight: 'bold' },
+                    bodyFont: { size: 12 },
+                    padding: 10,
+                    cornerRadius: 4
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        color: energeticPlayfulPalette.darkGray,
+                         font: {
+                            size: 11
+                        }
+                    },
+                    grid: {
+                        display: false
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: energeticPlayfulPalette.darkGray
+                    },
+                    grid: {
+                        color: energeticPlayfulPalette.lightGray,
+                        borderDash: [2, 4],
+                    }
+                }
+            }
+        };
+
+        const employeeData = {
+            labels: ['Mentores', 'Administrativos', 'Seguridad', 'Aseo'],
+            datasets: [{
+                label: 'Número de Empleados',
+                data: [30, 10, 3, 6],
+                backgroundColor: [
+                    energeticPlayfulPalette.coral,
+                    energeticPlayfulPalette.teal,
+                    energeticPlayfulPalette.skyBlue,
+                    energeticPlayfulPalette.yellowGold
+                ],
+                borderColor: '#fff',
+                borderWidth: 2,
+                borderRadius: 4
+            }]
+        };
+
+        new Chart(document.getElementById('employeeChart'), {
+            type: 'bar',
+            data: employeeData,
+            options: {
+                ...commonChartOptions,
+                scales: {
+                    x: {
+                        ...commonChartOptions.scales.x,
+                        title: {
+                            display: true,
+                            text: 'Rol del Empleado',
+                            color: energeticPlayfulPalette.darkGray
+                        }
+                    },
+                    y: {
+                        ...commonChartOptions.scales.y,
+                        title: {
+                            display: true,
+                            text: 'Cantidad',
+                            color: energeticPlayfulPalette.darkGray
+                        },
+                        ticks: {
+                             stepSize: 5
+                        }
+                    }
+                }
+            }
+        });
+        
+        const fase1Data = {
+            labels: [
+                'Fundamentos de la Ciberseguridad y Amenazas Comunes', 
+                'Gestión Segura de Contraseñas y Autenticación Multifactor (MFA)', 
+                'Reconocimiento y Reporte de Phishing e Ingeniería Social', 
+                'Seguridad en el Uso de Dispositivos y Redes'
+            ],
+            datasets: [{
+                label: 'Duración (minutos)',
+                data: [60, 45, 75, 60],
+                backgroundColor: [
+                    energeticPlayfulPalette.coral,
+                    energeticPlayfulPalette.teal,
+                    energeticPlayfulPalette.skyBlue,
+                    energeticPlayfulPalette.yellowGold
+                ],
+                borderColor: '#fff',
+                borderWidth: 2,
+                borderRadius: 4
+            }]
+        };
+
+        fase1Data.labels = fase1Data.labels.map(label => processLabel(label, 20));
+
+        new Chart(document.getElementById('fase1Chart'), {
+            type: 'bar',
+            data: fase1Data,
+            options: {
+                ...commonChartOptions,
+                indexAxis: 'y',
+                scales: {
+                     x: {
+                        ...commonChartOptions.scales.x,
+                        title: {
+                            display: true,
+                            text: 'Duración (minutos)',
+                            color: energeticPlayfulPalette.darkGray
+                        }
+                    },
+                    y: {
+                        ...commonChartOptions.scales.y,
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+
+        const fase2Data = {
+            labels: [
+                'Manejo Seguro y Protección de Datos Confidenciales', 
+                'Desarrollo Seguro y Mejores Prácticas de Infraestructura'
+            ],
+            datasets: [{
+                label: 'Duración Máxima (minutos)',
+                data: [90, 180],
+                backgroundColor: [energeticPlayfulPalette.teal, energeticPlayfulPalette.skyBlue],
+                borderColor: '#fff',
+                borderWidth: 2,
+                borderRadius: 4
+            }]
+        };
+        
+        fase2Data.labels = fase2Data.labels.map(label => processLabel(label, 18));
+        
+        new Chart(document.getElementById('fase2Chart'), {
+            type: 'bar',
+            data: fase2Data,
+            options: {
+                ...commonChartOptions,
+                 scales: {
+                     x: {
+                        ...commonChartOptions.scales.x,
+                        title: {
+                            display: true,
+                            text: 'Duración (minutos)',
+                            color: energeticPlayfulPalette.darkGray
+                        }
+                    },
+                    y: {
+                        ...commonChartOptions.scales.y
+                    }
+                }
+            }
+        });
+        
+        const topicsData = {
+            datasets: [{
+                label: 'Tópicos Clave',
+                data: [
+                    { x: 1, y: 3, r: 35, label: 'Phishing' },
+                    { x: 2.5, y: 4, r: 30, label: 'Malware' },
+                    { x: 4.5, y: 2, r: 25, label: 'Contraseñas & MFA' },
+                    { x: 6, y: 5, r: 20, label: 'Ingeniería Social' },
+                    { x: 7.5, y: 2.5, r: 18, label: 'Seguridad en Redes' },
+                    { x: 2, y: 1, r: 15, label: 'Protección de Datos' },
+                    { x: 5, y: 7, r: 12, label: 'Desarrollo Seguro' },
+                ],
+                backgroundColor: [
+                    energeticPlayfulPalette.coral,
+                    energeticPlayfulPalette.teal,
+                    energeticPlayfulPalette.skyBlue,
+                    energeticPlayfulPalette.yellowGold,
+                    '#FF8C42',
+                    '#A06CD5',
+                    '#58A4B0'
+                ]
+            }]
+        };
+
+        new Chart(document.getElementById('topicsChart'), {
+            type: 'bubble',
+            data: topicsData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                         callbacks: {
+                            title: () => '', 
+                            label: function(context) {
+                                return context.raw.label;
+                            }
+                        },
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 10,
+                        cornerRadius: 4
+                    }
+                },
+                scales: {
+                    x: { display: false },
+                    y: { display: false }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
